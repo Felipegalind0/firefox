@@ -257,6 +257,20 @@ treechildren::-moz-tree-separator(selected, focus) {
   border-top: var(--border-width) solid var(--organizer-border-color);
 }
 
+#detailsPaneSplitter {
+  /* Height extends grab area of splitter. Height and margin-block-end should match. */
+  --splitter-height: 3px;
+
+  border: 0;
+  min-height: 0;
+  /* stylelint-disable-next-line stylelint-plugin-mozilla/use-design-tokens */
+  height: var(--splitter-height);
+  background-color: transparent;
+  /* stylelint-disable-next-line stylelint-plugin-mozilla/use-design-tokens */
+  margin-block-end: calc(-1 * var(--splitter-height));
+  position: relative;
+}
+
 .expander-up,
 .expander-down {
   appearance: none;

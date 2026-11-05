@@ -454,6 +454,12 @@ var PlacesOrganizer = {
     input.clear();
     input.editor?.clearUndoRedo();
     this._setSearchScopeForNode(node);
+    document
+      .getElementById("detailsPane")
+      .toggleAttribute(
+        "history",
+        PlacesSearchBox.filterCollection == "history"
+      );
     this.updateDetailsPane();
   },
 
@@ -1546,6 +1552,8 @@ var ContentArea = {
     // showDetailsPane.
     let detailsPane = document.getElementById("detailsPane");
     detailsPane.hidden = !options.showDetailsPane;
+    document.getElementById("detailsPaneSplitter").hidden =
+      !options.showDetailsPane;
 
     // toolbarSet.
     for (let elt of this._toolbar.childNodes) {

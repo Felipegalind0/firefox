@@ -369,7 +369,8 @@
                      class="allDownloadsListBox"
                      context="downloadsContextMenu"/>
       </vbox>
-      <vbox id="detailsPane">
+      <splitter id="detailsPaneSplitter" orient="vertical"/>
+      <vbox id="detailsPane" persist="style">
         <vbox id="itemsCountBox" align="center" flex="1" hidden="true">
           <spacer style="flex: 3 3"/>
           <label id="itemsCountText"/>

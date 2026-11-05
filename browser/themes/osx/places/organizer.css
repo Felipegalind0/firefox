@@ -115,6 +115,13 @@
   border-top: 1px solid color-mix(in srgb, FieldText 50%, transparent);
 }
 
+#detailsPaneSplitter {
+  min-height: 0;
+  height: 3px;
+  margin-block-end: -3px;
+  position: relative;
+}
+
 #placeContent {
   appearance: none;
   border: none;

@@ -66,8 +66,15 @@
 }
 
 #detailsPane {
-  min-height: 16em;
+  height: 16em;
+  min-height: 5em;
   padding: 5px;
+  overflow-y: auto;
+
+  /* History entries always show the same fields, so fit the pane to them. */
+  &[history] {
+    height: auto;
+  }
 }
 
 /* Toolbar */
